@@ -196,16 +196,16 @@
                 <hr>
                 <p style="font-size: x-large;">What is Mindustry logic?</p>
             <p class="ti"> Mindustry Logic (mlog) is a scripting language added in v6 for the purpose of introducing more advanced automation and 
-                strategy into the game  It is heavily inspired by Assembly languages, therefore the language is a low level language 
-                making it harder to understand (low level being low to machine language (Assembly, C, etc) and far from human language, 
-                high level language example are (Python, javaScript, C#, etc) if you have previous programming experience it's very easy 
-                to learn but people who are entirely new to programming might find this a little confusing.
+                strategy into the game.  It is heavily inspired by Assembly languages, therefore the language is a low level language 
+                making it harder to understand (low level being low to machine language (Assembly, C, etc)) and far from human language. 
+                Some examples of high level languages are Python, javaScript, C#, etc. If you have previous programming experience it's very easy 
+                to learn, but people who are entirely new to programming might find this a little confusing.
                 <br><br>
-                Fun fact, it is turing complete (meaning you can literally do anything a real computer can, although the practicality is questionable),
-                it is often used for more advanced automation (telling units what to do, disabling/enabling blocks, and more),
-                For more advanced people, they like to mess around just for fun making stuff that are not actually useful to campaign like games, emulators, renderings, etc.
+                Fun fact, it is Turing complete (meaning you can literally do anything a real computer can, although the practicality is questionable).
+                It is often used for more advanced automation such as telling units what to do, disabling/enabling blocks, and more.
+                More advanced people usually like to mess around just for fun making stuff that are not actually useful in campaign like games, emulators, renderings, etc.
                 <br><br>
-                mlog is not necessary for the completion of campaign , it is very optional, often the time you spent coding will be more than if you just do it manually..</p>
+                Mlog is not necessary for the completion of campaign, it is completely optional. Often, the time you spend coding will be more than it would take if you just do it manually.</p>
             </section>
             <section id="glossary" class="subtitle">
                 <h1>Glossary</h1>
@@ -216,45 +216,46 @@
                         <li><p><b>Integers</b></p></li>
                         <p class="ti">
                             <a href="https://en.wikipedia.org/wiki/Integer">Integers</a> 
-                            are whole numbers, meaning no decimal, 1,2,3, are integers, 1.001, are not.
+                            are whole numbers, meaning no decimals. 1, 2, and 3 are integers. 1.1 is not.
                         </p>
                         <div style="margin-left: 30px;"><b>integer limitations</b><br>
                             <p class="ti">
                                 The largest integer that can be represented accurately in a single number in mindustry (double-precision floating-point format) 
                                 is <span style="color: yellow;">2^53</span>, which equals <span style="color: yellow;">9007199254740992</span>. 
-                                from <span style="color: yellow;">-2^53</span> , which is <span style="color: yellow;">−9007199254740992</span>. Beyond these limits, 
+                                The smallest integer is <span style="color: yellow;">-2^53</span> , which equals <span style="color: yellow;">−9007199254740992</span>. Beyond these limits, 
                                 floating-point representation may lead to inaccuracies due to the way numbers are rounded.
                             </p>
                         </div>
                     </section>
                     <section id="float">
                         <li><p><b>Float</b></p></li>
-                            <p class="ti">Opposite of integers, decimal numbers, 1.001, are float.</p>
+                            <p class="ti">More precise than integers: decimal numbers. 1.1 is a float.</p>
                     </section>
                     <section id="boolean">
                         <li><p><b>Boolean</b></p></li>
-                            <p class="ti">A data type that can have 1 of 2 states, true or false, 0 or 1.</p>
+                            <p class="ti">A data type that can have 1 of 2 states: true or false, 0 or 1.</p>
                     </section>
                     <section id="strings">
                         <li><p><b>Strings</b></p></li>
-                            <p class="ti">a sequence of characters, different from <a href="#variables" >variables</a>, in mlog strings are enclosed by “ (quotation mark) (“Hello, world” is a string).</p>
+                            <p class="ti">A sequence of characters, different from <a href="#variables" >variables</a>. In mlog, strings are enclosed by “ which is the quotation mark. (“Hello, world” is a string).</p>
                     </section>
                     <section id="building-reference">
                         <li><p><b>Block or Unit Reference</b></p></li>
                             <p class="ti">
-                                every block and unit has a unique reference, so every block and unit can be differentiated from 
-                                each other , internally they look like <code>message#98257</code> or <code>poly#49178</code>, these are not viewable without modifying the game.
-                                in game these references are stored in a variable like <a href="#links" >Building Variable</a>, or <a href="#unit" >@unit</a>,
-                                they can also be written to a normal variable
+                                Every block and unit has a unique reference, so every block and unit can be differentiated from 
+                                each other. Internally they look like <code>message#98257</code> or <code>poly#49178</code>, these are not viewable without modifying the game.
+                                In game these references are stored in a variable like <a href="#links" >Building Variable</a> or <a href="#unit" >@unit</a>.
+                                They can also be written to a normal variable.
                             </p>
                     </section>
                     <section id="contentname">
                         <li><p><b>Content name</b></p></li>
                         <p class="ti">
-                            in-game content/item names, like <code class="content-name">@copper</code>, <code class="content-name">@surge-alloy</code>, <code class="content-name">@antumbra</code> kebab case naming, and case sensitive
-                            <br>these are <b>not</b> variables, these are <b>values</b> that can be stored in variables
+                            In-game content/item names, like <code class="content-name">@copper</code>, <code class="content-name">@surge-alloy</code>, and <code class="content-name">@antumbra</code> follow
+                            kebab case naming, and are case sensitive.
+                            <br>These are <b>not</b> variables, these are <b>values</b> that can be stored in variables.
                             <br>
-                            <br>content name can be found in the <a href="#appendix">appendix</a>
+                            <br>Content name can be found in the <a href="#appendix">appendix.</a>
                         </p>
                     </section>
                 </ul>
@@ -264,90 +265,90 @@
                 <hr>
                 <section id="processors">
                     <h2>Processors</h2>
-                    <p class="ti">There are 3 types of Logic Processors, Micro processor, Logic processor, and Hyper processor, 
-                        each have different speeds and range (Information can be found in the game’s info menu).</p>
+                    <p class="ti">There are 3 types of Logic Processors: Micro processor, Logic processor, and Hyper processor.
+                        Each has a different speed and range (this information can be found in the game’s info menu).</p>
                 </section>
                 <section id="processors-ui">
                     <h2>Processor’s UI</h2>
-                    <p class="ti">when opening a processor by clicking the pencil icon:</p>
+                    <p class="ti">When opening a processor by clicking the pencil icon.</p>
                     <img src="image/ui3.png" alt="alt" style="left: 130px;">                
-                    <p class="ti">you will be prompted to this screen:</p>
+                    <p class="ti">You will be prompted to this screen.</p>
                     <img alt="alt" src="image/ui.png" >
-                    <p class="ti">the <code>Add</code> button <span style="font-size: 40px;">
-                        (<img alt="alt" src="image/ui7.png"  style="top: 15px; width: 120px;">)</span> opens a menu to add an instruction:</p>
+                    <p class="ti">The <code>Add</code> button <span style="font-size: 40px;">
+                        (<img alt="alt" src="image/ui7.png"  style="top: 15px; width: 120px;">)</span> opens a menu to add an instruction.</p>
                     <img alt="alt" src="image/ui1.png" >
-                    <p class="ti">the <code>Vars</code> button <span style="font-size: 40px;">
+                    <p class="ti">The <code>Vars</code> button <span style="font-size: 40px;">
                         (<img alt="alt" src="image/vars.png"  style="top: 15px; width: 120px;">)</span> 
-                        opens a menu showing all of your variables
-                        <br><br>this menu is very useful for debugging
+                        opens a menu showing all of your variables.
+                        <br><br>This menu is very useful for debugging.
                     </p>
                     <img alt="alt" src="image/data types.png"  style="width: 800px;">
-                    <p class="ti">the <code>edit</code> button <span style="font-size: 40px;">
+                    <p class="ti">Whe <code>edit</code> button <span style="font-size: 40px;">
                         (<img alt="alt" src="image/ui5.png"  style="top: 15px; width: 120px;">)</span>opens a menu to export/import codes</p>
                     <img alt="alt" src="image/ui2.png"  style="width: 300px; left:160px;">
-                    <p>when clicking “Copy to Clipboard” it will copy the code of the processor to your clipboard, 
-                        unlike a schematic, mlog code are plain readable text, <a href="#writing-in-text-editor" >click here for more info</a>
-                        <br>this mlog code can be pasted into a processor again using the "import from clipboard"
+                    <p>When clicking “Copy to Clipboard” it will copy the code of the processor to your clipboard. 
+                        Unlike a schematic, mlog code is plain readable text. <a href="#writing-in-text-editor" >Click here for more info.</a>
+                        <br>This mlog code can be pasted into a processor again using the "import from clipboard" button.
                     </p>
                 </section>
                 <section id="how-processor-run-its-code">
-                    <h2>How Processor run its code</h2>
-                    <p class="ti">They Always run Instruction from top to bottom 1 at a time
+                    <h2>How processors run their code</h2>
+                    <p class="ti">They always run instructions from top to bottom, 1 at a time.
                         You can only jump and wait, you cannot make it run from bottom to top for example.
-                        Here is a visualization:</p>
+                        <br>Here is a visualization:</p>
                         <img alt="alt" src="image/print1.gif"  style="width: 700px;">
-                        <p class="ti">with jumps:</p>
+                        <p class="ti">With jumps:</p>
                         <img alt="alt" src="image/vis jump.gif" >
-                        <p>When the processor reach the end of its instruction it will go back to 0, repeating the loop indefinitely </p>
+                        <p>When the processor reaches the end of its instructions it will go back to 0 (the first line), repeating the loop indefinitely.</p>
                 </section>
                 <section id="links">
                     <h2>Links</h2>
                     <p class="ti">You can link a building to the processor by clicking the processor 
-                        (you can see a circle, this is the processor range) and clicking the building
+                        (you can see a circle, this is the processor range) and clicking the building.
                     </p>
                     <img alt="alt" src="image/link.png"  style="width: 600px;">
-                    <p><code class="variable">display1</code> is now a variable that can be used in the processor, it stores a <a href="#building-reference" >building reference,</a> 
-                        is also sometimes called a “building variable”,
-                        <br>building variable cannot be overwritten by any means, 
-                        <br>in other words, you cannot use this variable to put in an output of an instruction
-                        <br>however you can copy the its contents to another variable, Like <code class="op">set myBuilding = display1</code>
-                        <br>the variable <code class="variable">myBuilding</code> is now the same as <code class="variable">display1</code>, meaning you can use it the same way,
-                        <br>however <code class="variable">myBuilding</code> is an independent variable (your variable) now, this means it also acts like a normal variable,
-                        for example if the display block that is linked to the processor is destroyed the variable <code class="variable">display1</code> will be null, 
-                        but <code class="variable">myBuilding</code> will still have the last value it was set to, so you can still sensor things like <code class="content-name">@dead</code> from it
+                    <p><code class="variable">display1</code> is now a variable that can be used in the processor. It stores a <a href="#building-reference" >building reference,</a> 
+                        which is also sometimes called a “building variable”.
+                        <br>Building variables cannot be overwritten by any means.
+                        <br>In other words, you cannot use this variable to put in an output of an instruction.
+                        <br>However, you can copy the its contents to another variable like <code class="op">set myBuilding = display1</code>.
+                        <br>The variable <code class="variable">myBuilding</code> is now the same as <code class="variable">display1</code>, meaning you can use it the same way.
+                        <br>However, <code class="variable">myBuilding</code> is an independent variable (your variable) now. This means it also acts like a normal variable,
+                        for example if the display block that is linked to the processor is destroyed, the variable <code class="variable">display1</code> will be null. 
+                        However, <code class="variable">myBuilding</code> will still have the last value it was set to, so you can still sensor things like <code class="content-name">@dead</code> from it.
                     </p>
                 </section>
                 <section id="variables">
                     <h2>Variables</h2>
                     <p class="ti">
-                        Variables are the fundamental of programming, to put it simply, they are just named 
-                        “containers” to store data to, for example the <code class="op">Set</code> instruction sets a variable:
+                        Variables are the fundamental of programming. To put it simply, they are just 
+                        “containers” with a name to store data in. For example, the <code class="op">Set</code> instruction creates a variable and gives it a value, or assigns a new value to an existing variable:
                     </p>
                     <img alt="alt" src="image/set x 10.png" >
                     <p>
-                        This will make <code class="variable">x</code> a variable, this variable can be used for all 
-                        sort of different things, for example, the <code class="op">Operation</code> instruction
+                        This will make <code class="variable">x</code> a variable. This variable can be used for all 
+                        sorts of different things. For example, the <code class="op">Operation</code> instruction:
                     </p>
                     <img alt="alt" src="image/operation.png" >
                     <p>
-                        Because <code class="variable op">x</code> is <span style="color: yellow;">10</span> this operation means <span style="color: yellow;">10</span> + <span style="color: yellow;">5</span>, and the result of it is written to the <code class="variable op">result</code> variable, 
-                        meaning <code class="variable op">result</code> is now <span style="color: yellow;">15</span>. Of course it doesn’t have to be "result", you can write anything for it, 
-                        different people write their variable differently, some chooses to write arbitrary words/letters like “peach” 
-                        and others simply write “x+5”, whatever you choose is up to you, just keep in mind you have to remember them.
-                        <br><br> an <span style="color: red;">undefined</span> variable will have <span style="color: red;">null</span> as their default value and this gets coerced to <span style="color: yellow;">0</span>.
-                        <br><br>a processor doesn't have a limit on how many variables it can have, however a processor has a 1000 instruction limit
+                        Because <code class="variable op">x</code> is <span style="color: yellow;">10</span>, this operation means <span style="color: yellow;">10</span> + <span style="color: yellow;">5</span>, and the result of it is written to the <code class="variable op">result</code> variable, 
+                        meaning <code class="variable op">result</code> is now <span style="color: yellow;">15</span>. Of course it doesn’t have to be "result", you can name it anything. 
+                        Different people name their variables differently, some choose to write arbitrary words/letters like “peach” 
+                        and others simply write “x+5”, whatever you choose is up to you, just keep in mind you have to remember them. 
+                        <br><br> An <span style="color: red;">undefined</span> variable will have <span style="color: red;">null</span> as their default value and this gets coerced to <span style="color: yellow;">0</span>.
+                        <br><br>A processor doesn't have a limit on how many variables it can have, however, a processor does have a limit of 1000 instructions.
                     </p>
                     <div id="incrementing-variable">
                         <p style="margin: 0px;">
-                            <b>Incrementing Variable</b>
+                            <b>Incrementing Variables</b>
                         </p>
                         <p class="ti" style="margin: 4px;">
-                            Increment is the act or process of increasing
+                            Incrementing is the act or process of increasing.
                         </p>
                         <img alt="alt" src="image/increment.png" >
                         <p>
-                            Since processor loops, this will increase <code class="variable op">x</code> by <span style="color: yellow;">1</span> every loop, as time goes on x will 
-                            get bigger and bigger. This is what’s called incrementing a variable
+                            Since processors loop, this will increase <code class="variable op">x</code> by <span style="color: yellow;">1</span> every loop. As time goes on, x will 
+                            get bigger and bigger. This is called incrementing a variable.
                         </p>
                     </div>
                 </section>
@@ -355,20 +356,20 @@
                     <h2>Built in Variables</h2>
                     <p class="ti">
                         Built in variables are variables that have their value determined by the game, 
-                        but can also change. they are preceded by “@”, here are lists of built in variables 
+                        but can also change. They are preceded by “@”, here is a list of some built in variables 
                         (if you’re just starting out you don’t have to read all of this you can always come back):
                     </p>
                     <ol style="list-style-type: disc;">
                         <li><b>@counter</b></li>
                         <p style="margin-top: 5px;">
-                            @counter shows the current line number the processor runs at,
-                            <br>other than giving you crucial 
-                            information while debugging you can also use it by writing to it, changing its value, usage example:
+                            @counter shows the current line number the processor runs at.
+                            <br>Other than giving you crucial 
+                            information while debugging you can also use it by writing to it, changing its value. Here is a usage example:
                         </p>
                         <img alt="alt" src="image/set counter 10.png" style="max-width: 85vw !important;">
                         <p>
-                            This acts like <code class="jump">jump always</code> where it will jump to instruction 10
-                            If read it will return the next line instead:
+                            This acts like <code class="jump">jump always</code> where it will jump to instruction 10.
+                            If read it will return the next line instead of the current line:
                         </p>
                         <img alt="alt" src="image/set x @counter.png" style="max-width: 85vw !important;">
                         <p>
@@ -377,24 +378,24 @@
                         </p>
                         <li><b>@this</b></li>
                             <p style="margin-top: 5px;" class="ti">
-                                <b>@this</b> shows the <a href="#building-reference" > building reference</a> 
-                                for that processor, example: anything that
+                                <b>@this</b> returns the <a href="#building-reference" > building reference</a> 
+                                for the processor getting it. Anything that
                                 uses building reference can be replaced by this, so instead of
-                                <code class="variable">processor1</code> you can write <code class="variable">@this</code> for this processor
+                                <code class="variable">processor1</code> you can write <code class="variable">@this</code> for this processor.
                             </p>
                         <li><b><a href="#unit" >@unit</a></b></li>
                         <p style="margin-top: 5px;" class="ti">	
                             <b>@unit</b> shows the current unit that is stored in the processor as the 
                             result of the <code class="unit">unit bind</code> instruction. 
-                            For more information go <a href="#controlling-units" >Controlling Units</a>
+                            For more information go <a href="#controlling-units" >Controlling Units.</a>
                         </p>
                         <li><b>@thisx and @thisy</b></li>
                         <p style="margin-top: 5px;" class="ti">
-                            Like the name suggest, both shows the coordinates location of the processor respectively
+                            Like the name suggests, each of these show the coordinate location of the processor in the x and y planes respectively.
                         </p>
                         <li><b>@mapw and @maph</b></li>
                         <p style="margin-top: 5px;" class="ti">
-                            These shows the map width and map height, for example if your map width is 300 <code class="variable">@mapw</code> will be equal 300
+                            These show the map width and map height. For example, if your map width is 300 <code class="variable">@mapw</code> will be equal to 300.
                         </p>
                         <li><b>@links </b></li>
                         <p style="margin-top: 5px;" class="ti"><b>@links</b> shows the number of links the processor has, example: if you have
@@ -4280,3 +4281,4 @@
     
 </body>
 </html>
+
